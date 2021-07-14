@@ -1,0 +1,94 @@
+{
+  "sidebar": {
+    "title": "ESG Data Analysis",
+    "shortTitle": "ESG",
+    "dashboard": "Dashboard",
+    "pages": "Pages",
+    "pricing": "Pricing",
+    "rtl": "RTL Support",
+    "timeline": "Timeline",
+    "login": "Login",
+    "register": "Register",
+    "lock": "Lock Screen",
+    "userProfile": "User Profile",
+    "components": "Components",
+    "multiLevelCollapse": "Multilevel Collapse",
+    "example": "Example Page",
+    "buttons": "Buttons",
+    "gridSystem": "Grid System",
+    "panels": "Panels",
+    "sweetAlert": "Sweet Alert",
+    "icons": "Icons",
+    "notifications": "Notifications",
+    "typography": "Typography",
+    "forms": "Forms",
+    "regularForms": "Regular Forms",
+    "extendedForms": "Extended Forms",
+    "validationForms": "Validation Forms",
+    "wizard": "Wizard",
+    "tables": "Tables",
+    "regularTables": "Regular Tables",
+    "extendedTables": "Extended Tables",
+    "paginatedTables": "Paginated Tables",
+    "maps": "Maps",
+    "googleMaps": "Google Maps",
+    "fullScreenMaps": "Full Screen Map",
+    "vectorMaps": "Vector Maps",
+    "widgets": "Widgets",
+    "charts": "Charts",
+    "calendar": "Calendar",
+    "data": "Data",
+    "data_status": "Data Status",
+    "add_data": "Add Data",
+    "review_data": "Review Data",
+    "goals": "Goals and KPIs",
+    "reporting": "Reporting",
+    "help": "Help",
+    "general": "General Data",
+    "envir": "Environmental",
+    "social": "Social",
+    "gov": "Governance",
+    "Logout": "Logout",
+    "org": "Organisation",
+    "add_org": "Add Organistion"
+  },
+  "data": {
+    "board": "Board Member",
+    "org": "Orgnisation"
+  },
+  "input": {
+    "valid": {
+      "function": "Function",
+      "name": "Name",
+      "email": "Email",
+      "address": "Address",
+      "phone": "Phone Number",
+      "orgname": "Organisation Name",
+      "url": "URL"
+    },
+    "placeholder": {
+      "name": "Name",
+      "Function": "Function",
+      "mamber": "Member Since",
+      "Email": "Email",
+      "address": "Address",
+      "phone": "Phone Number",
+      "orgname": "Organisation Name",
+      "Url": "URL"
+    }
+  },
+  "submit": {
+    "add_member": "Add Member",
+    "add_org": "Add Organisation"
+  },
+  "table": {
+    "lable": {
+      "name": "Name",
+      "function": "Function",
+      "age": "Age",
+      "email": "Email",
+      "address": "Address",
+      "phone": "Phone Number"
+    }
+  }
+}

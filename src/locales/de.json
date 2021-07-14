@@ -1,0 +1,74 @@
+{
+  "sidebar": {
+    "title": "ESG-Datenanalyse",
+    "dashboard": "Instrumententafel",
+    "data": "Daten",
+    "data_status": "Datenstatus",
+    "add_data": "Daten hinzufügen",
+    "review_data": "Daten überprüfen",
+    "goals": "Ziele und KPIs",
+    "reporting": "Berichterstattung",
+    "help": "Hilfe",
+    "general": "Allgemeine Daten",
+    "envir": "Umwelt",
+    "social": "Sozial",
+    "gov": "Führung",
+    "shortTitle": "ESG",
+    "Logout": "Ausloggen",
+    "org": "Organisation",
+    "add_org": "Organisation hinzufügen"
+  },
+  "navheader": {
+    "dashboard": "Instrumententafel",
+    "data": "Daten",
+    "data_status": "Datenstatus",
+    "add_data": "Daten hinzufügen",
+    "review_data": "Daten überprüfen",
+    "goals": "Ziele und KPIs",
+    "reporting": "Berichterstattung",
+    "help": "Hilfe",
+    "general": "Allgemeine Daten",
+    "envir": "Umwelt",
+    "social": "Sozial",
+    "gov": "Führung"
+  },
+  "data": {
+    "board": "Vorstandsmitglied",
+    "org": "Organisation"
+  },
+  "input": {
+    "valid": {
+      "function": "Funktion",
+      "name": "Name",
+      "email": "Email",
+      "address": "Adresse",
+      "phone": "Telefonnummer",
+      "orgname": "Organisationsname",
+      "url": "URL"
+    },
+    "placeholder": {
+      "name": "Name",
+      "Function": "Funktion",
+      "mamber": "Mitglied seit",
+      "Email": "Email",
+      "address": "Adresse",
+      "phone": "Telefonnummer",
+      "orgname": "Organisationsname",
+      "Url": "URL"
+    }
+  },
+  "submit": {
+    "add_member": "Mitglied hinzufügen",
+    "add_org": "Organisation hinzufügen"
+  },
+  "table": {
+    "lable": {
+      "name": "Name",
+      "function": "Funktion",
+      "age": "Alter",
+      "email": "Email",
+      "address": "Adresse",
+      "phone": "Telefonnummer"
+    }
+  }
+}
