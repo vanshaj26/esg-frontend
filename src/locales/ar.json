@@ -39,7 +39,8 @@
     "calendar": "التقويم",
     "Logout": "تسجيل خروج",
     "org": "منظمة",
-    "add_org": "إضافة Organistion"
+    "add_org": "إضافة Organistion",
+    "user": "إضافة مستخدم"
   },
   "data": {
     "board": "عضو مجلس الإدارة",

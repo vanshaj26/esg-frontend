@@ -7,7 +7,7 @@ function resolveSrc(_path) {
 // vue.config.js
 module.exports = {
   devServer: {
-    proxy: 'http://3.134.109.168:8000/',
+    proxy: 'http://18.221.250.235:8000/',
 },
   lintOnSave: true,
   configureWebpack: {

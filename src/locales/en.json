@@ -50,7 +50,8 @@
     "gov": "Governance",
     "Logout": "Logout",
     "org": "Organisation",
-    "add_org": "Add Organistion"
+    "add_org": "Add Organistion",
+    "user": "Add User"
   },
   "data": {
     "board": "Board Member",

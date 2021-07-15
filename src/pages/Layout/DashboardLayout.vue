@@ -16,7 +16,8 @@
           }"
         >
         </sidebar-item>
-        <sidebar-item
+        <div  v-if="user.user_type == 'user'">
+<sidebar-item 
           :link="{ name: $t('sidebar.data'), icon: 'tim-icons icon-image-02' }"
         >
           <sidebar-item
@@ -29,15 +30,31 @@
             :link="{ name: $t('sidebar.review_data'), path: '/data/review' }"
           ></sidebar-item>
         </sidebar-item>
-
-       <sidebar-item
+        </div>
+        
+<div v-if="user.user_type == 'admin'">
+  <sidebar-item
           :link="{ name: $t('sidebar.org'), icon: 'tim-icons icon-image-02' }"
         >
           <sidebar-item
-            :link="{ name: $t('sidebar.add_org'), path: '/organisation' }"
+            :link="{ name: $t('sidebar.add_org'), path: '/org/organisation' }"
           ></sidebar-item>
          
         </sidebar-item>
+</div>
+
+<div v-if="user.user_type == 'admin'">
+  <sidebar-item
+          :link="{ name: $t('sidebar.user'),path: '/org/adduser', icon: 'fas fa-users' }"
+        >
+      
+         
+        </sidebar-item>
+</div>
+       
+      <div v-if="user.user_type == 'user'">
+
+      
 
          <sidebar-item
           :link="{
@@ -75,6 +92,7 @@
             path: '/social'
           }"
         ></sidebar-item>
+        </div>
         
       </template>
     </side-bar>
@@ -116,7 +134,7 @@ function initScrollbar(className) {
     }, 100);
   }
 }
-
+import axios from "axios";
 import DashboardNavbar from './DashboardNavbar.vue';
 import ContentFooter from './ContentFooter.vue';
 import DashboardContent from './Content.vue';
@@ -124,6 +142,8 @@ import SidebarFixedToggleButton from './SidebarFixedToggleButton.vue';
 import { SlideYDownTransition, ZoomCenterTransition } from 'vue2-transitions';
 
 export default {
+
+  
   components: {
     DashboardNavbar,
     ContentFooter,
@@ -135,8 +155,23 @@ export default {
   },
   data() {
     return {
+      url: process.env.VUE_APP_ROOT_API,
+       user: null,
       sidebarBackground: 'vue' //vue|blue|orange|green|red|primary
     };
+  },
+
+   async created() {
+    const response1 = await axios.get(this.url + "/auth/self-detail/", {
+      headers: {
+        Authorization: "Token " + localStorage.getItem("usertoken"),
+      },
+    });
+
+
+    this.user = response1.data;
+    
+    console.log(this.user);
   },
   methods: {
     toggleSidebar() {

@@ -16,7 +16,8 @@
     "shortTitle": "ESG",
     "Logout": "Ausloggen",
     "org": "Organisation",
-    "add_org": "Organisation hinzufügen"
+    "add_org": "Organisation hinzufügen",
+    "user": "Nutzer hinzufügen"
   },
   "navheader": {
     "dashboard": "Instrumententafel",

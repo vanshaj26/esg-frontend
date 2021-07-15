@@ -74,7 +74,9 @@
         <div slot="footer">
           <center>
             <base-button type="success" size="sm">
-              <i class="tim-icons icon-simple-add"></i> Add Now
+
+            <router-link to="/org/organisation" style="color: white;"><i class="tim-icons icon-simple-add"></i>Now </router-link>
+              
             </base-button>
           </center>
         </div>
@@ -92,7 +94,9 @@
         <div slot="footer">
            <center>
             <base-button type="success" size="sm">
-              <i class="fas fa-users"></i> Manage
+            <router-link to="/org/adduser" style="color: white;">
+            <i class="fas fa-users"></i> Manage</router-link>
+              
             </base-button>
           </center>
          
@@ -111,7 +115,10 @@
         <div slot="footer">
           <center>
             <base-button type="success" size="sm">
-             <i class="tim-icons icon-simple-add"></i> Add Now
+            <router-link to="/frame" style="color:white">
+              <i class="tim-icons icon-simple-add"></i> Add Now
+            </router-link>
+             
             </base-button>
           </center>
         </div>

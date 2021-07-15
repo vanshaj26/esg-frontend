@@ -60,19 +60,19 @@ router.beforeEach((to, from, next) => {
   }
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some((record) => record.meta.requiresAuth3)) {
-//     if (localStorage.getItem("visit_id") == null) {
-//       next({
-//         name: "Dashboard",
-//       });
-//     } else {
-//       next();
-//     }
-//     //need
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth3)) {
+    if (localStorage.usertoken && localStorage.getItem("usertype") == 'admin') {
+      next();
+    } else {
+      next({
+        name: "Login",
+      });
+    }
+    //need
+  } else {
+    next();
+  }
+});
 
 export default router;

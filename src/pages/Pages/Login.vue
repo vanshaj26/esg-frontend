@@ -92,24 +92,25 @@ export default {
     methods: {
      async submit() {
        
-       alert('In')
+     
       const response = await axios.post(this.url + "/auth/login/", {
         email: this.email,
         password: this.password,
       });
       localStorage.setItem("usertoken", response.data.token);
+      localStorage.setItem("usertype", response.data.user_type);
       console.log(response);
       // this.$log.error("Transaction saved!");
       // this.$store.dispatch("user", response.data.user);
       if (response.data.user_type == "admin") {
           this.$router.push("/dashboard");
           console.log(response.data.user_type);
-          alert("daashboard");
       } else if (response.data.user_type == "user") {
         if (response.data.f_login == true) {
            this.$router.push("/change_password");
         } else {
-            this.$router.push("/profile");
+            this.$router.push("/dashboard");
+            alert('userIN')
         }
       }
     },

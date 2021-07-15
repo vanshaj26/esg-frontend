@@ -2,10 +2,10 @@
   <div class="sidebar" :data="backgroundColor">
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a  class="simple-text logo-mini">
           <img :src="logo" alt="app-logo" />
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a  class="simple-text logo-normal">
           {{ title }}
         </a>
       </div>
@@ -35,12 +35,12 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Creative Tim',
+      default: 'ESG',
       description: 'Sidebar title'
     },
     shortTitle: {
       type: String,
-      default: 'CT',
+      default: 'ESG',
       description: 'Sidebar short title'
     },
     logo: {

@@ -115,7 +115,8 @@ const Social = () =>
 //social
 const org = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Org/AddOrg.vue");
-
+  const adduser = () =>
+  import(/* webpackChunkName: "data" */ "src/pages/Org/AddUser.vue");
 // TableList pages
 const RegularTables = () =>
   import(/* webpackChunkName: "tables" */ "src/pages/Tables/RegularTables.vue");
@@ -299,6 +300,27 @@ let dataMenu = {
   ]
 };
 
+
+let adminmenu = {
+  path: "/org",
+  component: DashboardLayout,
+  name: "Org",
+  redirect: "/org/organisation",
+  meta: { requiresAuth3: true },
+  children: [
+    {
+      path: "organisation",
+      name: "Organisation",
+      components: { default: org }
+    },
+    {
+      path: "adduser",
+      name: "Add User",
+      components: { default: adduser }
+    }
+  ]
+};
+
 let authPages = {
   path: "/",
   component: AuthLayout,
@@ -341,6 +363,7 @@ const routes = [
   pagesMenu,
   dataMenu,
   authPages,
+  adminmenu,
   {
     path: "/",
     component: DashboardLayout,
@@ -394,11 +417,7 @@ const routes = [
         name: "Social",
         components: { default: Social }
       },
-      {
-        path: "organisation",
-        name: "Organisation",
-        components: { default: org }
-      }
+      
     ]
   },
   { path: "*", component: NotFound }
