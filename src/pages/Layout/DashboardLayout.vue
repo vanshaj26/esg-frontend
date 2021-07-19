@@ -7,117 +7,126 @@
       :short-title="$t('sidebar.shortTitle')"
       :title="$t('sidebar.title')"
     >
-      <template slot-scope="props" slot="links">
+      <template slot="links">
         <div v-if="user.user_type == 'admin'">
           <sidebar-item
-          :link="{
-            name: $t('sidebar.dashboard'),
-            icon: 'tim-icons icon-chart-pie-36',
-            path: '/dashboard'
-          }"
-        >
-        </sidebar-item>
+            :link="{
+              name: $t('sidebar.dashboard'),
+              icon: 'tim-icons icon-chart-pie-36',
+              path: '/dashboard'
+            }"
+          >
+          </sidebar-item>
         </div>
 
-         <div v-if="user.user_type == 'user'">
+        <div v-if="user.user_type == 'user'">
           <sidebar-item
-          :link="{
-            name: $t('sidebar.dashboard'),
-            icon: 'tim-icons icon-chart-pie-36',
-            path: '/userdashboard'
-          }"
-        >
-        </sidebar-item>
+            :link="{
+              name: $t('sidebar.dashboard'),
+              icon: 'tim-icons icon-chart-pie-36',
+              path: '/userdashboard'
+            }"
+          >
+          </sidebar-item>
         </div>
-        
-        <div  v-if="user.user_type == 'user'">
-<!-- <sidebar-item 
+
+        <div v-if="user.user_type == 'user'">
+          <!-- <sidebar-item 
           :link="{ name: $t('sidebar.data'), icon: 'tim-icons icon-image-02' }"
         >
         
         </sidebar-item> -->
 
           <sidebar-item
-            :link="{ name: $t('sidebar.data_status'), icon: 'tim-icons icon-chart-bar-32', path: '/data/datastatus' }"
+            :link="{
+              name: $t('sidebar.data_status'),
+              icon: 'tim-icons icon-chart-bar-32',
+              path: '/data/datastatus'
+            }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: $t('sidebar.add_data'), icon: 'tim-icons icon-simple-add', path: '/data/adddata' }"
+            :link="{
+              name: $t('sidebar.add_data'),
+              icon: 'tim-icons icon-simple-add',
+              path: '/data/adddata'
+            }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: $t('sidebar.review_data'), icon: 'tim-icons icon-single-copy-04', path: '/data/review' }"
+            :link="{
+              name: $t('sidebar.review_data'),
+              icon: 'tim-icons icon-single-copy-04',
+              path: '/data/review'
+            }"
           ></sidebar-item>
         </div>
-        
-<div v-if="user.user_type == 'admin'">
-  <sidebar-item
-          :link="{ name: $t('sidebar.org'), icon: 'tim-icons icon-image-02' }"
-        >
+
+        <div v-if="user.user_type == 'admin'">
           <sidebar-item
-            :link="{ name: $t('sidebar.add_org'), path: '/org/organisation' }"
-          ></sidebar-item>
-         
-        </sidebar-item>
-</div>
-
-<div v-if="user.user_type == 'admin'">
-  <sidebar-item
-          :link="{ name: $t('sidebar.user'),path: '/org/adduser', icon: 'fas fa-users' }"
-        >
-      
-         
-        </sidebar-item>
-</div>
-       
-      <div v-if="user.user_type == 'user'">
-
-      <sidebar-item
-          :link="{
-            name: $t('sidebar.Question'),
-            icon: 'tim-icons icon-molecule-40',
-            path: '/question'
-          }"
-        ></sidebar-item>
-
-         <sidebar-item
-          :link="{
-            name: $t('sidebar.goals'),
-            icon: 'tim-icons icon-satisfied',
-            path: '/goal'
-          }"
-        ></sidebar-item>
-        <sidebar-item
-          :link="{
-            name: $t('sidebar.reporting'),
-            icon: 'tim-icons icon-settings',
-            path: '/reporting'
-          }"
-        ></sidebar-item>
-        
-        
-         <sidebar-item
-          :link="{
-            name: $t('sidebar.toda'),
-            icon: 'tim-icons icon-chart-bar-32',
-            path: '/env'
-          }"
-        ></sidebar-item>
-
-         <sidebar-item
-          :link="{
-            name: $t('sidebar.stack'),
-            icon: 'tim-icons icon-chart-bar-32',
-            path: '/env'
-          }"
-        ></sidebar-item>
-        <sidebar-item
-          :link="{
-            name: $t('sidebar.help'),
-            icon: 'tim-icons icon-time-alarm',
-            path: '/social'
-          }"
-        ></sidebar-item>
+            :link="{ name: $t('sidebar.org'), icon: 'tim-icons icon-image-02' }"
+          >
+            <sidebar-item
+              :link="{ name: $t('sidebar.add_org'), path: '/org/organisation' }"
+            ></sidebar-item>
+          </sidebar-item>
         </div>
-        
+
+        <div v-if="user.user_type == 'admin'">
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.user'),
+              path: '/org/adduser',
+              icon: 'fas fa-users'
+            }"
+          >
+          </sidebar-item>
+        </div>
+
+        <div v-if="user.user_type == 'user'">
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.Question'),
+              icon: 'tim-icons icon-molecule-40',
+              path: '/question'
+            }"
+          ></sidebar-item>
+
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.goals'),
+              icon: 'tim-icons icon-satisfied',
+              path: '/goal'
+            }"
+          ></sidebar-item>
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.reporting'),
+              icon: 'tim-icons icon-settings',
+              path: '/reporting'
+            }"
+          ></sidebar-item>
+
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.toda'),
+              icon: 'tim-icons icon-chart-bar-32',
+              path: '/env'
+            }"
+          ></sidebar-item>
+
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.stack'),
+              icon: 'tim-icons icon-chart-bar-32',
+              path: '/env'
+            }"
+          ></sidebar-item>
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.help'),
+              icon: 'tim-icons icon-time-alarm',
+              path: '/social'
+            }"
+          ></sidebar-item></div>
       </template>
     </side-bar>
     <!--Share plugin (for demo purposes). You can remove it if don't plan on using it-->
@@ -141,9 +150,9 @@
 </template>
 <script>
 /* eslint-disable no-new */
-import PerfectScrollbar from 'perfect-scrollbar';
-import 'perfect-scrollbar/css/perfect-scrollbar.css';
-import SidebarShare from './SidebarSharePlugin';
+import PerfectScrollbar from "perfect-scrollbar";
+import "perfect-scrollbar/css/perfect-scrollbar.css";
+import SidebarShare from "./SidebarSharePlugin";
 function hasElement(className) {
   return document.getElementsByClassName(className).length > 0;
 }
@@ -159,15 +168,13 @@ function initScrollbar(className) {
   }
 }
 import axios from "axios";
-import DashboardNavbar from './DashboardNavbar.vue';
-import ContentFooter from './ContentFooter.vue';
-import DashboardContent from './Content.vue';
-import SidebarFixedToggleButton from './SidebarFixedToggleButton.vue';
-import { SlideYDownTransition, ZoomCenterTransition } from 'vue2-transitions';
+import DashboardNavbar from "./DashboardNavbar.vue";
+import ContentFooter from "./ContentFooter.vue";
+import DashboardContent from "./Content.vue";
+import SidebarFixedToggleButton from "./SidebarFixedToggleButton.vue";
+import { SlideYDownTransition, ZoomCenterTransition } from "vue2-transitions";
 
 export default {
-
-  
   components: {
     DashboardNavbar,
     ContentFooter,
@@ -180,21 +187,19 @@ export default {
   data() {
     return {
       url: process.env.VUE_APP_ROOT_API,
-       user: null,
-      sidebarBackground: 'vue' //vue|blue|orange|green|red|primary
+      user: null,
+      sidebarBackground: "vue" //vue|blue|orange|green|red|primary
     };
   },
 
-   async created() {
+  async created() {
     const response1 = await axios.get(this.url + "/auth/self-detail/", {
       headers: {
-        Authorization: "Token " + localStorage.getItem("usertoken"),
-      },
+        Authorization: "Token " + localStorage.getItem("usertoken")
+      }
     });
-
-
     this.user = response1.data;
-    
+
     console.log(this.user);
   },
   methods: {
@@ -202,7 +207,7 @@ export default {
       if (this.$sidebar.showSidebar) {
         this.$sidebar.displaySidebar(false);
       }
-    },
+    }
     // initScrollbar() {
     //   let docClasses = document.body.classList;
     //   let isWindows = navigator.platform.startsWith('Win');

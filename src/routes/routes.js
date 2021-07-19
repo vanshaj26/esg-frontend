@@ -290,6 +290,7 @@ let dataMenu = {
   path: "/data",
   component: DashboardLayout,
   name: "Data",
+  meta: { requiresAuthuser: true },
   redirect: "/data/datastatus",
   children: [
     {
@@ -361,6 +362,22 @@ let authPages = {
   ]
 };
 
+let authAdminPages = {
+  path: "/",
+  component: DashboardLayout,
+  redirect: "/dashboard",
+  name: "Dashboard Admin",
+  meta: { requiresAuth2: true },
+  children: [
+    {
+      path: "dashboard",
+      name: "Admin",
+      components: { default: Dashboard },
+     
+    }
+  ]
+};
+
 const routes = [
   {
     path: "/",
@@ -375,39 +392,22 @@ const routes = [
   dataMenu,
   authPages,
   adminmenu,
+  authAdminPages,
   {
     path: "/",
     component: DashboardLayout,
-    redirect: "/dashboard",
+    redirect: "/userdashboard",
     name: "Dashboard layout",
+    meta: { requiresAuthuser: true },
     children: [
-      {
-        path: "dashboard",
-        name: "Admin",
-        components: { default: Dashboard },
-        meta: { requiresAuth2: true }
-      },
+      
       {
         path: "userdashboard",
         name: "Dashboard",
         components: { default: DashboardUser },
-        // meta: { requiresAuth2: true }
+        
       },
-      {
-        path: "calendar",
-        name: "Calendar",
-        components: { default: Calendar }
-      },
-      {
-        path: "charts",
-        name: "Charts",
-        components: { default: Charts }
-      },
-      {
-        path: "widgets",
-        name: "Widgets",
-        components: { default: Widgets }
-      },
+
       {
         path: "goal",
         name: "Goal and KPIs",

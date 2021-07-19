@@ -1,9 +1,5 @@
 <template>
-  <div class="content">
-    <div class="col-md-12 ml-auto mr-auto">
-      <h2 class="text-center">Questionnaire</h2>
-    </div>
-
+  <div>
     <div class="col-md-12">
       <card>
         <template slot="header">
@@ -28,48 +24,65 @@
               </el-option>
             </el-select>
           </div>
+          <br />
+          <br />
         </template>
 
         <tabs type="primary">
           <tab-pane label="General Data">
-            <div class="col-md-12">
-              <card>
-                <template slot="header">
-                  <!-- <h5 class="card-category">Collapse Example</h5> -->
-                  <h3 class="card-title">General Data</h3>
-                </template>
-
-                <collapse :multiple-active="true" :active-index="0">
-                  <collapse-item title="Subcategory-1">
-                    <div>
-                      <ol>
-                        <li>
-                          <h4>
-                            <b>which option best describes your job role?</b>
-                          </h4>
-                          <p style="text-muted">
-                            <b> Description:</b>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Repudiandae, cum pariatur unde reiciendis, vel
-                            blanditiis reprehenderit, ad enim iusto eius
-                            suscipit optio ipsa quasi molestiae aut ducimus
-                            consequuntur facere! Iusto.
-                          </p>
-                          <br />
-                          <base-input label="Comment">
-                            <textarea
-                              class="form-control"
-                              id="exampleFormControlTextarea1"
-                              rows="3"
-                            ></textarea>
+            <collapse :multiple-active="true" :active-index="0">
+              <collapse-item title="Subcategory-1">
+                <div>
+                  <ol>
+                    <li>
+                      <h4>
+                        <b>which option best describes your job role?</b>
+                      </h4>
+                      <p style="text-muted">
+                        <b> Description:</b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <br />
+                      <base-input label="Comment">
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </base-input>
+                      <br />
+                      <div class="row">
+                        <div class="col-md-6">
+                          <base-input
+                            placeholder="Value"
+                            addon-left-icon="tim-icons icon-lock-circle"
+                            type="text"
+                          >
                           </base-input>
-                        </li>
-                      </ol>
-                    </div>
-                  </collapse-item>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="custom-file">
+                            <input
+                              type="file"
+                              class="custom-file-input"
+                              id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01"
+                            />
+                            <label
+                              class="custom-file-label"
+                              for="inputGroupFile01"
+                              >Choose file</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </collapse-item>
 
-                  <collapse-item title="Subcategory-2">
-                    <!-- <div
+              <collapse-item title="Subcategory-2">
+                <!-- <div
                       class="col-12 d-flex justify-content-center justify-content-sm-between flex-wrap"
                     >
                       <el-select
@@ -88,21 +101,21 @@
                       </el-select>
                     </div> -->
 
-                    <div>
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </div>
-                    <br />
-                    <!-- <div
+                <div>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+                <br />
+                <!-- <div
                       class="col-12 d-flex justify-content-center justify-content-sm-between flex-wrap"
                     >
                       <base-pagination
@@ -113,26 +126,24 @@
                       >
                       </base-pagination>
                     </div> -->
-                  </collapse-item>
+              </collapse-item>
 
-                  <collapse-item title="Subcategory-3">
-                    <div>
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </div>
-                  </collapse-item>
-                </collapse>
-              </card>
-            </div>
+              <collapse-item title="Subcategory-3">
+                <div>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </collapse-item>
+            </collapse>
           </tab-pane>
 
           <tab-pane label="Environmental">

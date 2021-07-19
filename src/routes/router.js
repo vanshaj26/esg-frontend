@@ -51,8 +51,10 @@ router.beforeEach((to, from, next) => {
       next({
         name: "Login",
       });
+      alert("login_okkk")
     } else {
       next();
+      alert(login1_okk);
     }
     //need
   } else {
@@ -64,9 +66,43 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth3)) {
     if (localStorage.usertoken && localStorage.getItem("usertype") == 'admin') {
       next();
+      alert("dash")
     } else {
       next({
-        name: "Login",
+        name: "Dashboard",
+      });
+      alert("client")
+    }
+    //need
+  } else {
+    next();
+  }
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth2)) {
+    if (localStorage.usertoken && localStorage.getItem("usertype") == 'admin') {
+      next();
+    } else {
+      next({
+        name: "Dashboard",
+      });
+     
+    }
+    //need
+  } else {
+    next();
+  }
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuthuser)) {
+    if (localStorage.usertoken && localStorage.getItem("usertype") == 'user') {
+      next();
+     
+    } else {
+      next({
+        name:"Dashboard Admin"
       });
     }
     //need
@@ -74,5 +110,8 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
+
+
 
 export default router;
