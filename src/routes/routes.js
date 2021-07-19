@@ -47,6 +47,11 @@ const Dashboard = () =>
   import(
     /* webpackChunkName: "dashboard" */ "src/pages/Dashboard/Dashboard.vue"
   );
+
+  const DashboardUser = () =>
+  import(
+    /* webpackChunkName: "dashboard" */ "src/pages/Dashboard/ClientDashboard.vue"
+  );
 import Widgets from "src/pages/Widgets.vue";
 
 // Forms pages
@@ -89,6 +94,8 @@ const AddData = () =>
 
 const ReviewData = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Data/review_data.vue");
+  const ReviewData1 = () =>
+  import(/* webpackChunkName: "data" */ "src/pages/Data/reviewdata1.vue");
 
 //goal
 const Goal = () =>
@@ -107,6 +114,9 @@ const General = () =>
 //Environmental
 const Environmental = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Env/env.vue");
+
+  const Question = () =>
+  import(/* webpackChunkName: "data" */ "src/pages/Question/Question.vue");
 
 //social
 const Social = () =>
@@ -296,7 +306,8 @@ let dataMenu = {
       path: "review",
       name: "Review Data",
       components: { default: ReviewData }
-    }
+    },
+    
   ]
 };
 
@@ -372,9 +383,15 @@ const routes = [
     children: [
       {
         path: "dashboard",
-        name: "Dashboard",
+        name: "Admin",
         components: { default: Dashboard },
         meta: { requiresAuth2: true }
+      },
+      {
+        path: "userdashboard",
+        name: "Dashboard",
+        components: { default: DashboardUser },
+        // meta: { requiresAuth2: true }
       },
       {
         path: "calendar",
@@ -417,6 +434,16 @@ const routes = [
         name: "Social",
         components: { default: Social }
       },
+      {
+        path: "question",
+        name: "Question",
+        components: { default: Question }
+      },
+      {
+        path: "review1",
+        name: "Review",
+        components: { default: ReviewData1 }
+      }
       
     ]
   },

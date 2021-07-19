@@ -40,7 +40,11 @@
     "Logout": "تسجيل خروج",
     "org": "منظمة",
     "add_org": "إضافة Organistion",
-    "user": "إضافة مستخدم"
+    "user": "إضافة مستخدم",
+    "toda": "TODOS",
+    "reporting": "تقرير",
+    "Question": "سؤال",
+    "stack": "مشاركة أصحاب المصلحة"
   },
   "data": {
     "board": "عضو مجلس الإدارة",

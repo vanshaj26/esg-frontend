@@ -17,7 +17,10 @@
     "Logout": "Ausloggen",
     "org": "Organisation",
     "add_org": "Organisation hinzufügen",
-    "user": "Nutzer hinzufügen"
+    "user": "Nutzer hinzufügen",
+    "toda": "TODOS",
+    "Question": "Frage",
+    "stack": "Engagement der Stakeholder"
   },
   "navheader": {
     "dashboard": "Instrumententafel",

@@ -42,7 +42,7 @@
     "add_data": "Add Data",
     "review_data": "Review Data",
     "goals": "Goals and KPIs",
-    "reporting": "Reporting",
+    "reporting": "Report",
     "help": "Help",
     "general": "General Data",
     "envir": "Environmental",
@@ -51,7 +51,10 @@
     "Logout": "Logout",
     "org": "Organisation",
     "add_org": "Add Organistion",
-    "user": "Add User"
+    "user": "Add User",
+    "toda": "TODOS",
+    "Question": "Question",
+    "stack": "StakeHolder Engagement"
   },
   "data": {
     "board": "Board Member",

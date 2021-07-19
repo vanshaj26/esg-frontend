@@ -109,7 +109,7 @@ export default {
         if (response.data.f_login == true) {
            this.$router.push("/change_password");
         } else {
-            this.$router.push("/dashboard");
+            this.$router.push("/userdashboard");
             alert('userIN')
         }
       }

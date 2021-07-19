@@ -213,6 +213,22 @@ export default {
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: [80, 100, 70, 80, 120, 80]
+            },
+             {
+              label: 'Data',
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: '#2380f7',
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [8, 10, 70, 80, 120, 80]
             }
           ]
         },

@@ -8,7 +8,8 @@
       :title="$t('sidebar.title')"
     >
       <template slot-scope="props" slot="links">
-        <sidebar-item
+        <div v-if="user.user_type == 'admin'">
+          <sidebar-item
           :link="{
             name: $t('sidebar.dashboard'),
             icon: 'tim-icons icon-chart-pie-36',
@@ -16,20 +17,35 @@
           }"
         >
         </sidebar-item>
+        </div>
+
+         <div v-if="user.user_type == 'user'">
+          <sidebar-item
+          :link="{
+            name: $t('sidebar.dashboard'),
+            icon: 'tim-icons icon-chart-pie-36',
+            path: '/userdashboard'
+          }"
+        >
+        </sidebar-item>
+        </div>
+        
         <div  v-if="user.user_type == 'user'">
-<sidebar-item 
+<!-- <sidebar-item 
           :link="{ name: $t('sidebar.data'), icon: 'tim-icons icon-image-02' }"
         >
+        
+        </sidebar-item> -->
+
           <sidebar-item
-            :link="{ name: $t('sidebar.data_status'), path: '/data/datastatus' }"
+            :link="{ name: $t('sidebar.data_status'), icon: 'tim-icons icon-chart-bar-32', path: '/data/datastatus' }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: $t('sidebar.add_data'), path: '/data/adddata' }"
+            :link="{ name: $t('sidebar.add_data'), icon: 'tim-icons icon-simple-add', path: '/data/adddata' }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: $t('sidebar.review_data'), path: '/data/review' }"
+            :link="{ name: $t('sidebar.review_data'), icon: 'tim-icons icon-single-copy-04', path: '/data/review' }"
           ></sidebar-item>
-        </sidebar-item>
         </div>
         
 <div v-if="user.user_type == 'admin'">
@@ -54,12 +70,18 @@
        
       <div v-if="user.user_type == 'user'">
 
-      
+      <sidebar-item
+          :link="{
+            name: $t('sidebar.Question'),
+            icon: 'tim-icons icon-molecule-40',
+            path: '/question'
+          }"
+        ></sidebar-item>
 
          <sidebar-item
           :link="{
             name: $t('sidebar.goals'),
-            icon: 'tim-icons icon-settings',
+            icon: 'tim-icons icon-satisfied',
             path: '/goal'
           }"
         ></sidebar-item>
@@ -71,23 +93,25 @@
           }"
         ></sidebar-item>
         
-        <sidebar-item
-          :link="{
-            name: $t('sidebar.general'),
-            icon: 'tim-icons icon-chart-bar-32',
-            path: '/general'
-          }"
-        ></sidebar-item>
+        
          <sidebar-item
           :link="{
-            name: $t('sidebar.envir'),
+            name: $t('sidebar.toda'),
+            icon: 'tim-icons icon-chart-bar-32',
+            path: '/env'
+          }"
+        ></sidebar-item>
+
+         <sidebar-item
+          :link="{
+            name: $t('sidebar.stack'),
             icon: 'tim-icons icon-chart-bar-32',
             path: '/env'
           }"
         ></sidebar-item>
         <sidebar-item
           :link="{
-            name: $t('sidebar.social'),
+            name: $t('sidebar.help'),
             icon: 'tim-icons icon-time-alarm',
             path: '/social'
           }"

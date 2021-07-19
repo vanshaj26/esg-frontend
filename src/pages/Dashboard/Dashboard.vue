@@ -164,7 +164,7 @@
         </div>
       </card>
     </div> -->
-    <!-- <div class="col-lg-4" :class="{ 'text-right': isRTL }">
+    <!-- <div class="col-lg-4">
       <card type="chart">
         <template slot="header">
           <h5 class="card-category">Daily Sales</h5>
@@ -402,7 +402,7 @@ export default {
           "rgba(66,134,121,0)"
         ],
         gradientStops: [1, 0.4, 0]
-      },
+      },  
       blueBarChart: {
         extraOptions: chartConfigs.barChartOptions,
         chartData: {

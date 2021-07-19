@@ -3,7 +3,7 @@
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <div class="logo">
         <a  class="simple-text logo-mini">
-          <img :src="logo" alt="app-logo" />
+          <img :src="logo" alt="ESG" />
         </a>
         <a  class="simple-text logo-normal">
           {{ title }}
@@ -43,11 +43,11 @@ export default {
       default: 'ESG',
       description: 'Sidebar short title'
     },
-    logo: {
-      type: String,
-      default: 'img/icon-vue.png',
-      description: 'Sidebar app logo'
-    },
+    // logo: {
+    //   type: String,
+    //   default: 'img/icon-vue.png',
+    //   description: 'Sidebar app logo'
+    // },
     backgroundColor: {
       type: String,
       default: 'vue',
