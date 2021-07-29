@@ -2,22 +2,27 @@
  
 
       <el-table :data="tableData" height="250" style="width: 100%">
-         <el-table-column label="Logo">
-        <div  class="img-container" style="height:50px; width:50px">
-          <img src="https://listcarbrands.com/wp-content/uploads/2017/10/Tata-Motors-Logo-768x570.png" alt="product image" />
-        </div>
-      </el-table-column>
+        <el-table-column label="Logo" min-width="50">
+                <div
+                  slot-scope="{ row }"
+                  class="img-container"
+                  style="height:50px; width:50px"
+                >
+                  <img :src="row.org_logo" alt="product image" />
+                </div>
+              </el-table-column>
         <!-- <el-table-column prop="date" label="Date" width="180">
         </el-table-column> -->
-        <el-table-column prop="name" label="Name">
+        <el-table-column prop="organisation_name" label="Name">
         </el-table-column>
-        <el-table-column prop="address" label="Url"> </el-table-column>
+        <el-table-column prop="website_url" label="Url"> </el-table-column>
       </el-table>
    
 </template>
 
 <script>
 import { Table, TableColumn, Select, Option, Alert } from "element-ui";
+import axios from "axios";
 
 export default {
   components: {
@@ -28,36 +33,31 @@ export default {
   },
   data() {
       return {
-        tableData: [{
-          date: '2016-05-03',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-04',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-01',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-08',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-06',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }, {
-          date: '2016-05-07',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }],
+         url: process.env.VUE_APP_ROOT_API,
+        tableData: [],
       }
-    }
+    },
+
+     async created() {
+    const response = await axios.get(this.url + "/org/api/tenant",{
+      headers: {
+        Authorization: "Token " + localStorage.getItem("usertoken"),
+      },
+    });
+
+     const response1 = await axios.get(this.url + "/frame/api/framework",{
+      headers: {
+        Authorization: "Token " + localStorage.getItem("usertoken"),
+      },
+    });
+
+   this.tableData = response.data
+    
+    // this.tenant = response.data.count.toString();
+    // this.framework = response1.data.count.toString();
+    console.log(response.data)
+    // console.log(typeof this.tenant.toString());
+  },
+
 };
 </script>

@@ -54,7 +54,6 @@ router.beforeEach((to, from, next) => {
       alert("login_okkk")
     } else {
       next();
-      alert(login1_okk);
     }
     //need
   } else {
@@ -66,7 +65,7 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth3)) {
     if (localStorage.usertoken && localStorage.getItem("usertype") == 'admin') {
       next();
-      alert("dash")
+      // alert("dash")
     } else {
       next({
         name: "Dashboard",

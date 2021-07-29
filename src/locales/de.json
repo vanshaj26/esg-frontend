@@ -20,7 +20,9 @@
     "user": "Nutzer hinzufügen",
     "toda": "TODOS",
     "Question": "Frage",
-    "stack": "Engagement der Stakeholder"
+    "stack": "Engagement der Stakeholder",
+    "question": "Frage hinzufügen",
+    "cat": "Kategorie hinzufügen"
   },
   "navheader": {
     "dashboard": "Instrumententafel",

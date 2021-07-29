@@ -118,6 +118,9 @@ const Environmental = () =>
   const Question = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Question/Question.vue");
 
+  const addques = () =>
+  import(/* webpackChunkName: "data" */ "src/pages/AddQuestion/AddQuestion.vue");
+
 //social
 const Social = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Social/social.vue");
@@ -127,6 +130,9 @@ const org = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Org/AddOrg.vue");
   const adduser = () =>
   import(/* webpackChunkName: "data" */ "src/pages/Org/AddUser.vue");
+
+  const addcat = () =>
+  import(/* webpackChunkName: "data" */ "src/pages/Org/AddCat.vue");
 // TableList pages
 const RegularTables = () =>
   import(/* webpackChunkName: "tables" */ "src/pages/Tables/RegularTables.vue");
@@ -314,10 +320,10 @@ let dataMenu = {
 
 
 let adminmenu = {
-  path: "/org",
+  path: "",
   component: DashboardLayout,
   name: "Org",
-  redirect: "/org/organisation",
+  redirect: "/organisation",
   meta: { requiresAuth3: true },
   children: [
     {
@@ -329,6 +335,17 @@ let adminmenu = {
       path: "adduser",
       name: "Add User",
       components: { default: adduser }
+    },
+
+    {
+      path: "addcat",
+      name: "Add Category",
+      components: { default: addcat }
+    },
+    {
+      path: "addques",
+      name: "Add Question",
+      components: { default: addques }
     }
   ]
 };

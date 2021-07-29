@@ -65,7 +65,7 @@
             :link="{ name: $t('sidebar.org'), icon: 'tim-icons icon-image-02' }"
           >
             <sidebar-item
-              :link="{ name: $t('sidebar.add_org'), path: '/org/organisation' }"
+              :link="{ name: $t('sidebar.add_org'), path: '/organisation' }"
             ></sidebar-item>
           </sidebar-item>
         </div>
@@ -74,8 +74,27 @@
           <sidebar-item
             :link="{
               name: $t('sidebar.user'),
-              path: '/org/adduser',
+              path: '/adduser',
               icon: 'fas fa-users'
+            }"
+          >
+          </sidebar-item>
+
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.question'),
+              path: '/addques',
+              icon: 'tim-icons icon-single-copy-04'
+            }"
+          >
+          </sidebar-item>
+         
+
+          <sidebar-item
+            :link="{
+              name: $t('sidebar.cat'),
+              path: '/addcat',
+              icon: 'tim-icons icon-support-17'
             }"
           >
           </sidebar-item>
@@ -187,7 +206,7 @@ export default {
   data() {
     return {
       url: process.env.VUE_APP_ROOT_API,
-      user: null,
+      user: "",
       sidebarBackground: "vue" //vue|blue|orange|green|red|primary
     };
   },
@@ -198,6 +217,7 @@ export default {
         Authorization: "Token " + localStorage.getItem("usertoken")
       }
     });
+    console.log(response1.data);
     this.user = response1.data;
 
     console.log(this.user);
@@ -224,11 +244,21 @@ export default {
     // }
   },
   mounted() {
-    this.initScrollbar();
+    // this.initScrollbar();
   }
 };
 </script>
 <style lang="scss">
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 $scaleSize: 0.95;
 @keyframes zoomIn95 {
   from {

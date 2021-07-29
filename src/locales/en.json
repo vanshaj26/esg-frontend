@@ -54,7 +54,9 @@
     "user": "Add User",
     "toda": "TODOS",
     "Question": "Question",
-    "stack": "StakeHolder Engagement"
+    "stack": "StakeHolder Engagement",
+    "question": "Add Question\n",
+    "cat": "Add Category"
   },
   "data": {
     "board": "Board Member",

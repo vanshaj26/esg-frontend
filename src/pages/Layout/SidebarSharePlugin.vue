@@ -89,6 +89,11 @@
         ]
       };
     },
+
+    created(){
+      
+    },
+
     methods: {
       toggleDropDown() {
         this.isOpen = !this.isOpen;
